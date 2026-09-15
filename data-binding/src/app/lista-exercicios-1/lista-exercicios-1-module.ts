@@ -6,9 +6,15 @@ import { ListaExercicios1RoutingModule } from './lista-exercicios-1-routing-modu
 import { ApresentacaoUser } from './apresentacao-user/apresentacao-user';
 import { CalculandoComInterpolation } from './calculando-com-interpolation/calculando-com-interpolation';
 import { ImagemDinamica } from './imagem-dinamica/imagem-dinamica';
+import { BotaoHabilitadoOuDesabilitado } from './botao-habilitado-ou-desabilitado/botao-habilitado-ou-desabilitado';
 
 @NgModule({
-  declarations: [ApresentacaoUser, CalculandoComInterpolation, ImagemDinamica],
+  declarations: [
+    ApresentacaoUser,
+    CalculandoComInterpolation,
+    ImagemDinamica,
+    BotaoHabilitadoOuDesabilitado,
+  ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })
 export class ListaExercicios1Module {}
