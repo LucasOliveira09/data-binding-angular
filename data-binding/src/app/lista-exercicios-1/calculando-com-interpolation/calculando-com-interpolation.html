@@ -1,1 +1,8 @@
-<p>calculando-com-interpolation works!</p>
+<label >Produto: </label><br>
+<input type="text" class="white" [(ngModel)]="produto"> <br>
+<label >Preço: </label><br>
+<input type="number" class="white" [(ngModel)]="preco"> <br>
+<label >Quantidade: </label><br>
+<input type="text" class="white" [(ngModel)]="quantidade"> <br>
+
+<p>Total:  {{ preco * quantidade | currency:'BRL' }}</p>

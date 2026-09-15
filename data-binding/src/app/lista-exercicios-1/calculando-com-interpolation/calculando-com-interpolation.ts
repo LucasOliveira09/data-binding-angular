@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './calculando-com-interpolation.css',
   templateUrl: './calculando-com-interpolation.html',
 })
-export class CalculandoComInterpolation {}
+export class CalculandoComInterpolation {
+produto: string = 'Teclado';
+preco: number = 150;
+quantidade: number = 3;
+
+}

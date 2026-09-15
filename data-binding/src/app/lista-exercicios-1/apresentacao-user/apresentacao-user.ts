@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './apresentacao-user.html',
 })
 export class ApresentacaoUser {
-  nome: string = '';
-  idade: string = '';
-  curso: string = '';
+  nome: string = 'Carlos';
+  idade: string = '25';
+  curso: string = 'Engenharia de Software';
 }
