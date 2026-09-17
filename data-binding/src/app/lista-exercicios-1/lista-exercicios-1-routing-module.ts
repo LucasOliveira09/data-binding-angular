@@ -6,6 +6,7 @@ import { CalculandoComInterpolation } from './calculando-com-interpolation/calcu
 import { ImagemDinamica } from './imagem-dinamica/imagem-dinamica';
 import { BotaoHabilitadoOuDesabilitado } from './botao-habilitado-ou-desabilitado/botao-habilitado-ou-desabilitado';
 import { ContadorCurtidas } from './contador-curtidas/contador-curtidas';
+import { ContadorCompleto } from './contador-completo/contador-completo';
 
 const routes: Routes = [
   { path: 'apresentacao-user', component: ApresentacaoUser },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'imagem-dinamica', component: ImagemDinamica },
   { path: 'botao-habilitado-ou-desabilitado', component: BotaoHabilitadoOuDesabilitado },
   { path: 'contador-curtidas', component: ContadorCurtidas },
+  { path: 'contador-completo', component: ContadorCompleto },
 ];
 
 @NgModule({
