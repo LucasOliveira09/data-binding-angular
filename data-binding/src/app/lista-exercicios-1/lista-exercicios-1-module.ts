@@ -11,6 +11,7 @@ import { ContadorCurtidas } from './contador-curtidas/contador-curtidas';
 import { ContadorCompleto } from './contador-completo/contador-completo';
 import { NomeTempoReal } from './nome-tempo-real/nome-tempo-real';
 import { CadastroProduto } from './cadastro-produto/cadastro-produto';
+import { ControleEstoque } from './controle-estoque/controle-estoque';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CadastroProduto } from './cadastro-produto/cadastro-produto';
     ContadorCompleto,
     NomeTempoReal,
     CadastroProduto,
+    ControleEstoque,
   ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })

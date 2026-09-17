@@ -1,0 +1,11 @@
+<div class="card" style="margin: 20px;">
+  <h3>9. Controle de Estoque</h3>
+  <label>Nome do Produto (Two-Way):</label><br>
+  <input type="text" [(ngModel)]="nomeProduto"><br><br>
+
+  <p>Produto: <strong>{{ nomeProduto }}</strong></p>
+  <p>Estoque atual: <strong>{{ estoque }}</strong> unidades</p>
+
+  <button (click)="remover()" [disabled]="estoque === 0">-</button>
+  <button (click)="adicionar()" style="margin-left: 8px;">+</button>
+</div>

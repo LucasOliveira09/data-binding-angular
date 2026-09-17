@@ -9,6 +9,7 @@ import { ContadorCurtidas } from './contador-curtidas/contador-curtidas';
 import { ContadorCompleto } from './contador-completo/contador-completo';
 import { NomeTempoReal } from './nome-tempo-real/nome-tempo-real';
 import { CadastroProduto } from './cadastro-produto/cadastro-produto';
+import { ControleEstoque } from './controle-estoque/controle-estoque';
 
 const routes: Routes = [
   { path: 'apresentacao-user', component: ApresentacaoUser },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'contador-completo', component: ContadorCompleto },
   { path: 'nome-tempo-real', component: NomeTempoReal },
   { path: 'cadastro-produto', component: CadastroProduto },
+  { path: 'controle-estoque', component: ControleEstoque },
 ];
 
 @NgModule({
