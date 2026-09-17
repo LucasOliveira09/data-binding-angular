@@ -1,1 +1,17 @@
-<p>botao-habilitado-ou-desabilitado works!</p>
+<div style="margin: 20px;">
+  <h3>Exercício 4 — Botão Habilitado / Desabilitado</h3>
+
+  <label>
+    <input type="checkbox" [(ngModel)]="Desabilitado">
+    Desabilitar botão?
+  </label>
+  <br><br>
+
+  <label>Digite seu nome para liberar o botão:</label><br>
+  <input type="text" [(ngModel)]="termo" placeholder="Digite algo...">
+  <br><br>
+
+  <button [disabled]="termo.trim().length === 0">
+    Salvar / Enviar
+  </button>
+</div>

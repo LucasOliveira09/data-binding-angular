@@ -8,7 +8,10 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {path: 'apresentacao-user', component: ApresentacaoUser },
   {path: 'calculando-com-interpolation', component: CalculandoComInterpolation },
-  {path: 'imagem-dinamica', component: ImagemDinamica }
+  {path: 'imagem-dinamica', component: ImagemDinamica },
+  {path: 'contador-curtidas', component: ContadorCurtidas },
+  {path: 'botao-habilitado-ou-desabilitado', component: BotaoHabilitadoOuDesabilitado }
+
 ];
 
 

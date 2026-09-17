@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './botao-habilitado-ou-desabilitado.css',
   templateUrl: './botao-habilitado-ou-desabilitado.html',
 })
-export class BotaoHabilitadoOuDesabilitado {}
+export class BotaoHabilitadoOuDesabilitado {
+  Desabilitado: boolean = true;
+
+  termo: string = '';
+}
