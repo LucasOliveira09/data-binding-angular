@@ -1,0 +1,16 @@
+<div class="card" style="margin: 20px;">
+  <h3>10. Login Simulado</h3>
+  <label>Usuário:</label><br>
+  <input type="text" [(ngModel)]="usuario" placeholder="Digite seu usuário"><br><br>
+
+  <label>Senha:</label><br>
+  <input type="password" [(ngModel)]="senha" placeholder="Digite sua senha"><br><br>
+
+  <button (click)="entrar()" [disabled]="usuario.trim().length === 0 || senha.trim().length === 0">
+    Entrar
+  </button>
+
+  <p *ngIf="mensagemBoasVindas" style="color: green; font-weight: bold; margin-top: 15px;">
+    {{ mensagemBoasVindas }}
+  </p>
+</div>
