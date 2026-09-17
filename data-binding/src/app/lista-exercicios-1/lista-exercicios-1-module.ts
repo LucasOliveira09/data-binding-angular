@@ -9,6 +9,7 @@ import { ImagemDinamica } from './imagem-dinamica/imagem-dinamica';
 import { BotaoHabilitadoOuDesabilitado } from './botao-habilitado-ou-desabilitado/botao-habilitado-ou-desabilitado';
 import { ContadorCurtidas } from './contador-curtidas/contador-curtidas';
 import { ContadorCompleto } from './contador-completo/contador-completo';
+import { NomeTempoReal } from './nome-tempo-real/nome-tempo-real';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ContadorCompleto } from './contador-completo/contador-completo';
     BotaoHabilitadoOuDesabilitado,
     ContadorCurtidas,
     ContadorCompleto,
+    NomeTempoReal,
   ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })
