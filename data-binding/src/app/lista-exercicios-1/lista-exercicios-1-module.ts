@@ -14,6 +14,7 @@ import { CadastroProduto } from './cadastro-produto/cadastro-produto';
 import { ControleEstoque } from './controle-estoque/controle-estoque';
 import { LoginSimulado } from './login-simulado/login-simulado';
 import { CarrinhoCompras } from './carrinho-compras/carrinho-compras';
+import { DesafioMatricula } from './desafio-matricula/desafio-matricula';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CarrinhoCompras } from './carrinho-compras/carrinho-compras';
     ControleEstoque,
     LoginSimulado,
     CarrinhoCompras,
+    DesafioMatricula,
   ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })

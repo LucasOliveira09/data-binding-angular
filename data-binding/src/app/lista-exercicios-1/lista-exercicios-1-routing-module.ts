@@ -12,6 +12,7 @@ import { CadastroProduto } from './cadastro-produto/cadastro-produto';
 import { ControleEstoque } from './controle-estoque/controle-estoque';
 import { LoginSimulado } from './login-simulado/login-simulado';
 import { CarrinhoCompras } from './carrinho-compras/carrinho-compras';
+import { DesafioMatricula } from './desafio-matricula/desafio-matricula';
 
 const routes: Routes = [
   { path: 'apresentacao-user', component: ApresentacaoUser },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'controle-estoque', component: ControleEstoque },
   { path: 'login-simulado', component: LoginSimulado },
   { path: 'carrinho-compras', component: CarrinhoCompras },
+  { path: 'desafio-matricula', component: DesafioMatricula },
 ];
 
 @NgModule({
