@@ -8,6 +8,7 @@ import { BotaoHabilitadoOuDesabilitado } from './botao-habilitado-ou-desabilitad
 import { ContadorCurtidas } from './contador-curtidas/contador-curtidas';
 import { ContadorCompleto } from './contador-completo/contador-completo';
 import { NomeTempoReal } from './nome-tempo-real/nome-tempo-real';
+import { CadastroProduto } from './cadastro-produto/cadastro-produto';
 
 const routes: Routes = [
   { path: 'apresentacao-user', component: ApresentacaoUser },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'contador-curtidas', component: ContadorCurtidas },
   { path: 'contador-completo', component: ContadorCompleto },
   { path: 'nome-tempo-real', component: NomeTempoReal },
+  { path: 'cadastro-produto', component: CadastroProduto },
 ];
 
 @NgModule({

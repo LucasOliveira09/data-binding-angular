@@ -1,0 +1,17 @@
+<div style="margin: 20px;">
+  <h3>8. Cadastro de Produto</h3>
+  <label>Produto:</label><br>
+  <input type="text" [(ngModel)]="produto"><br><br>
+
+  <label>Preço:</label><br>
+  <input type="number" [(ngModel)]="preco"><br><br>
+
+  <label>Quantidade:</label><br>
+  <input type="number" [(ngModel)]="quantidade"><br><br>
+
+  <hr>
+  <p>Produto: <strong>{{ produto }}</strong></p>
+  <p>Preço: <strong>{{ preco | currency:'BRL' }}</strong></p>
+  <p>Quantidade: <strong>{{ quantidade }}</strong></p>
+  <p>Total: <strong>{{ total | currency:'BRL' }}</strong></p>
+</div>
