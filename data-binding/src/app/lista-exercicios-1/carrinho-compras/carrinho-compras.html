@@ -1,0 +1,19 @@
+<div class="card" style="margin: 20px;">
+  <h3>11. Carrinho de Compras</h3>
+  <h4>{{ nomeProduto }}</h4>
+  <p>Preço: <strong>{{ preco | currency:'BRL' }}</strong></p>
+
+  <p>
+    Quantidade: <strong>{{ quantidade }}</strong>
+    <button (click)="decrementar()" [disabled]="quantidade <= 1" style="margin-left: 10px;">-</button>
+    <button (click)="incrementar()" style="margin-left: 5px;">+</button>
+  </p>
+
+  <p>Total: <strong>{{ total | currency:'BRL' }}</strong></p>
+
+  <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+
+  <p *ngIf="mensagemCarrinho" style="color: blue; font-weight: bold; margin-top: 15px;">
+    {{ mensagemCarrinho }}
+  </p>
+</div>

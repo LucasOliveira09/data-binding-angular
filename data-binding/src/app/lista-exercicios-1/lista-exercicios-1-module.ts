@@ -13,6 +13,7 @@ import { NomeTempoReal } from './nome-tempo-real/nome-tempo-real';
 import { CadastroProduto } from './cadastro-produto/cadastro-produto';
 import { ControleEstoque } from './controle-estoque/controle-estoque';
 import { LoginSimulado } from './login-simulado/login-simulado';
+import { CarrinhoCompras } from './carrinho-compras/carrinho-compras';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LoginSimulado } from './login-simulado/login-simulado';
     CadastroProduto,
     ControleEstoque,
     LoginSimulado,
+    CarrinhoCompras,
   ],
   imports: [CommonModule, ListaExercicios1RoutingModule, FormsModule],
 })
