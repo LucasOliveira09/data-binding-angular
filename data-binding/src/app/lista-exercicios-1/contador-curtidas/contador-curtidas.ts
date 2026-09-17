@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './contador-curtidas.css',
   templateUrl: './contador-curtidas.html',
 })
-export class ContadorCurtidas {}
+export class ContadorCurtidas {
+  curtidas: number = 0;
+
+  curtir(): void {
+    this.curtidas++;
+  }
+}
