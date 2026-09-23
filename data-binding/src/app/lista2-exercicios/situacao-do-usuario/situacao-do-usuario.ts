@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './situacao-do-usuario.css',
   templateUrl: './situacao-do-usuario.html',
 })
-export class SituacaoDoUsuario {}
+export class SituacaoDoUsuario {
+  usuarioLogado : boolean = false
+
+}

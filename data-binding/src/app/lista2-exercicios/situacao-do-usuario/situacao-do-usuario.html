@@ -1,1 +1,7 @@
-<p>situacao-do-usuario works!</p>
+<div *ngIf="usuarioLogado; else mensagemLogin" >
+  <p>Acesso não autorizado</p>
+</div>
+
+<ng-template #mensagemLogin>
+  <p>Usuario autenticado!</p>
+</ng-template>
