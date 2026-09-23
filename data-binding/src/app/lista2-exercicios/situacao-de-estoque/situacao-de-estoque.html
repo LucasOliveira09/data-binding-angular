@@ -1,0 +1,25 @@
+<div style="margin: 20px;">
+  <!-- Requisito 1: Mostre o nome e a quantidade do produto -->
+  <h3>Produto: {{ nomeProduto }}</h3>
+  <p>Estoque atual: <strong>{{ quantidadeEstoque }}</strong></p>
+
+  <!-- Requisito 2: Produto disponível quando quantidade > 0 -->
+  <p *ngIf="quantidadeEstoque > 0" style="color: green; font-weight: bold;">
+    Produto disponível
+  </p>
+
+  <!-- Requisito 3: Produto sem estoque quando quantidade == 0 -->
+  <p *ngIf="quantidadeEstoque === 0" style="color: red; font-weight: bold;">
+    Produto sem estoque
+  </p>
+
+  <!-- Requisito 4: Botões para adicionar e remover (Event Binding) -->
+  <!-- Requisito 6: Desabilita o botão de remoção quando for 0 (Property Binding) -->
+  <button (click)="remover()" [disabled]="quantidadeEstoque === 0">
+    Remover (-1)
+  </button>
+
+  <button (click)="adicionar()" style="margin-left: 8px;">
+    Adicionar (+1)
+  </button>
+</div>
