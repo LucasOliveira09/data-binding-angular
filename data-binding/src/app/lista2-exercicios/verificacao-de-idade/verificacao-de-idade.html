@@ -1,1 +1,12 @@
-<p>verificacao-de-idade works!</p>
+<label>Qual sua idade? </label><br>
+  <input type="number" [(ngModel)]="idade"><br><br>
+
+  <button (click)="validaIdade()">Enviar idade!</button>
+
+  <p *ngIf="idade > 0">{{ mensagem }}</p>
+
+<!-- Opcional: aviso de erro se for menor ou igual a zero e já tiver digitado -->
+<p *ngIf="idade !== null && idade <= 0" style="color: red;">
+  A idade precisa ser maior que 0.
+</p>
+<p>{{mensagem}}</p>
