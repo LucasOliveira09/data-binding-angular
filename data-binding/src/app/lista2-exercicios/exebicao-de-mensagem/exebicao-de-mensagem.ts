@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './exebicao-de-mensagem.html',
 })
 export class ExebicaoDeMensagem {
-  visivel : boolean = false;
+  mensagemVisivel: boolean = false;
 
-  
-
+  alternarMensagem(): void {
+    this.mensagemVisivel = !this.mensagemVisivel;
+  }
 }
