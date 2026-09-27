@@ -1,3 +1,4 @@
+import { ListaNomes } from './lista-nomes/lista-nomes';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
   { path: 'situacao-do-usuario', component: SituacaoDoUsuario },
   { path: "verificacao-de-idade", component: VerificacaoDeIdade},
-  { path: "situacao-de-estoque", component: SituacaoDeEstoque}
+  { path: "situacao-de-estoque", component: SituacaoDeEstoque},
+  { path: "lista-nomes", component: ListaNomes}
 ];
 
 @NgModule({

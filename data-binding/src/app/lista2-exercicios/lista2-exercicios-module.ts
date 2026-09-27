@@ -8,9 +8,16 @@ import { ExebicaoDeMensagem } from './exebicao-de-mensagem/exebicao-de-mensagem'
 import { SituacaoDoUsuario } from './situacao-do-usuario/situacao-do-usuario';
 import { VerificacaoDeIdade } from './verificacao-de-idade/verificacao-de-idade';
 import { SituacaoDeEstoque } from './situacao-de-estoque/situacao-de-estoque';
+import { ListaNomes } from './lista-nomes/lista-nomes';
 
 @NgModule({
-  declarations: [ExebicaoDeMensagem, SituacaoDoUsuario, VerificacaoDeIdade, SituacaoDeEstoque],
+  declarations: [
+    ExebicaoDeMensagem,
+    SituacaoDoUsuario,
+    VerificacaoDeIdade,
+    SituacaoDeEstoque,
+    ListaNomes,
+  ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })
 export class Lista2ExerciciosModule {}
