@@ -11,6 +11,7 @@ import { SituacaoDeEstoque } from './situacao-de-estoque/situacao-de-estoque';
 import { ListaNomes } from './lista-nomes/lista-nomes';
 import { TratamentoListaVazia } from './tratamento-lista-vazia/tratamento-lista-vazia';
 import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
+import { InterfaceProdutos } from './interface-produtos/interface-produtos';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
     ListaNomes,
     TratamentoListaVazia,
     CoresAlternadas,
+    InterfaceProdutos,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })

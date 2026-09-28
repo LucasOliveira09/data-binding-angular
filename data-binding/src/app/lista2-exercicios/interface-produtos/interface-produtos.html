@@ -1,0 +1,29 @@
+<div class="container">
+        <h2>Catálogo de Produtos em Estoque</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Posição</th>
+              <th>Nome</th>
+              <th>Preço Unitário</th>
+              <th>Qtd Disponível</th>
+              <th>Total em Estoque</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- ngFor com captura do índice -->
+            <tr *ngFor="let item of produtos; let i = index">
+              <!-- 1. Posição (humana, iniciando em 1) -->
+              <td>#{{ i + 1 }}</td>
+              <!-- 2. Nome -->
+              <td>{{ item.nome }}</td>
+              <!-- 2 e 3. Preço formatado em R$ -->
+              <td>{{ item.preco | currency:'BRL':'symbol' }}</td>
+              <!-- 2. Quantidade -->
+              <td>{{ item.quantidade }} un</td>
+              <!-- 4. Cálculo do valor total em estoque formatado -->
+              <td>{{ (item.preco * item.quantidade) | currency:'BRL':'symbol' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
