@@ -1,0 +1,76 @@
+<div class="container">
+        <h2>Gerenciador de Tarefas</h2>
+        <!-- Totais (Itens 6 e 7) -->
+        <div class="painel-status">
+          <div class="card-contador">
+            Total de tarefas: <strong>{{ totalTarefas }}</strong>
+          </div>
+          <div class="card-contador concluidas">
+            Concluídas: <strong>{{ totalConcluidas }}</strong>
+          </div>
+          <div class="card-contador pendentes">
+            Pendentes: <strong>{{ totalPendentes }}</strong>
+          </div>
+        </div>
+        <!-- Tabela de Tarefas (Item 8: se vazio, cai no #semTarefas) -->
+        <table *ngIf="tarefas.length > 0; else semTarefas">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tarefa</th>
+              <th>Responsável</th>
+              <th>Prioridade</th>
+              <th>Situação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let item of tarefas"
+              [ngClass]="{ 'tarefa-concluida': item.concluida }"
+            >
+              <td>#{{ item.id }}</td>
+              <td class="titulo-tarefa">{{ item.titulo }}</td>
+              <td>{{ item.responsavel }}</td>
+              <!-- Classe de prioridade via ngClass (Item 2) -->
+              <td>
+                <span
+                  class="badge-prioridade"
+                  [ngClass]="{
+                    'prioridade-baixa': item.prioridade === 'baixa',
+                    'prioridade-media': item.prioridade === 'media',
+                    'prioridade-alta': item.prioridade === 'alta'
+                  }"
+                >
+                  {{ item.prioridade }}
+                </span>
+              </td>
+              <!-- Situação Pendente ou Concluída (Item 4) -->
+              <td>
+                <span *ngIf="item.concluida" class="status-concluida">
+                  ✅ Concluída
+                </span>
+                <span *ngIf="!item.concluida" class="status-pendente">
+                  ⏳ Pendente
+                </span>
+              </td>
+              <!-- Botão para alterar situação (Item 5) -->
+              <td>
+                <button
+                  (click)="alternarSituacao(item)"
+                  class="btn-toggle"
+                  [ngClass]="item.concluida ? 'btn-reabrir' : 'btn-concluir'"
+                >
+                  {{ item.concluida ? 'Marcar como Pendente' : 'Concluir' }}
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Mensagem quando não existirem tarefas (Item 8) -->
+        <ng-template #semTarefas>
+          <div class="alerta-vazio">
+            <p>Nenhuma tarefa cadastrada no momento.</p>
+          </div>
+        </ng-template>
+      </div> 

@@ -1,0 +1,78 @@
+.container {
+        max-width: 850px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+      }
+      /* Painel de Métricas (Itens 6 e 7) */
+      .painel-status {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .card-contador {
+        background: #f4f6f8;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+        border-left: 4px solid #333;
+      }
+      .card-contador.concluidas { border-left-color: #2e7d32; }
+      .card-contador.pendentes { border-left-color: #e65100; }
+      /* 2. Cores por prioridade (badge) */
+      .badge-prioridade {
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      .prioridade-baixa {
+        background-color: #e3f2fd;
+        color: #1565c0;
+      }
+      .prioridade-media {
+        background-color: #fff8e1;
+        color: #f57f17;
+      }
+      .prioridade-alta {
+        background-color: #ffebee;
+        color: #c62828;
+      }
+      /* 3. Destaque visual da tarefa concluída */
+      .tarefa-concluida {
+        background-color: #f9f9f9;
+        opacity: 0.75;
+      }
+      .tarefa-concluida .titulo-tarefa {
+        text-decoration: line-through;
+        color: #777;
+      }
+      /* Tabela e botões */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #263238;
+        color: white;
+      }
+      .btn-toggle {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .btn-concluir {
+        background-color: #2e7d32;
+        color: white;
+      }
+      .btn-reabrir {
+        background-color: #e65100;
+        color: white;
+      }
