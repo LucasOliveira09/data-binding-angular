@@ -11,6 +11,7 @@ import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
 import { InterfaceProdutos } from './interface-produtos/interface-produtos';
 import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-produtos';
 import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
+import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: "cores-alternadas", component: CoresAlternadas},
   { path: "interface-produtos", component: InterfaceProdutos },
   { path: "classificacao-produtos", component: ClassificacaoProdutos },
-  { path: "promocao-produtos", component: PromocaoProdutos }
+  { path: "promocao-produtos", component: PromocaoProdutos },
+  { path: "produtos-disponiveis", component: ProdutosDisponiveis}
 ];
 
 @NgModule({

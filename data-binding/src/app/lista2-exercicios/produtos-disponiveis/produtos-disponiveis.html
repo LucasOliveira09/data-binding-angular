@@ -1,0 +1,39 @@
+<div class="container">
+        <h2>Catálogo de Produtos</h2>
+        <!-- 1. Opção para o usuário escolher o filtro -->
+        <div class="filtro-box">
+          <label>
+            <input type="checkbox" [(ngModel)]="somenteDisponiveis" />
+            Exibir apenas produtos com estoque disponível
+          </label>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 4. ng-container faz a repetição (*ngFor) -->
+            <ng-container *ngFor="let item of produtos">
+              <!-- Condição: mostra se o filtro estiver desativado OU se houver estoque -->
+              <tr *ngIf="!somenteDisponiveis || item.quantidade > 0">
+                <td>{{ item.nome }}</td>
+                <td>{{ item.preco | currency:'BRL':'symbol' }}</td>
+                <td>{{ item.quantidade }} un</td>
+                <td>
+                  <span *ngIf="item.quantidade > 0" style="color: green; font-weight: bold;">
+                    Disponível
+                  </span>
+                  <span *ngIf="item.quantidade === 0" style="color: red; font-weight: bold;">
+                    Esgotado
+                  </span>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </div>

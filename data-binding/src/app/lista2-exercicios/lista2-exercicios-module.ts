@@ -14,6 +14,7 @@ import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
 import { InterfaceProdutos } from './interface-produtos/interface-produtos';
 import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-produtos';
 import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
+import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
     InterfaceProdutos,
     ClassificacaoProdutos,
     PromocaoProdutos,
+    ProdutosDisponiveis,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })
