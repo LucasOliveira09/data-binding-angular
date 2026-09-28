@@ -1,0 +1,25 @@
+      .badge-status {
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 13px;
+        display: inline-block;
+      }
+      /* 1. Vermelho: Sem estoque (quantidade 0) */
+      .sem-estoque {
+        background-color: #ffebee;
+        color: #c62828;
+        border: 1px solid #c62828;
+      }
+      /* 2. Amarelo: Estoque baixo (entre 1 e 5) */
+      .estoque-baixo {
+        background-color: #fffde7;
+        color: #f57f17;
+        border: 1px solid #f57f17;
+      }
+      /* 3. Verde: Estoque disponível (acima de 5) */
+      .estoque-disponivel {
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        border: 1px solid #2e7d32;
+      }

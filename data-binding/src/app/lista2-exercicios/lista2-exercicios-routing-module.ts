@@ -9,6 +9,7 @@ import { SituacaoDeEstoque } from './situacao-de-estoque/situacao-de-estoque';
 import { TratamentoListaVazia } from './tratamento-lista-vazia/tratamento-lista-vazia';
 import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
 import { InterfaceProdutos } from './interface-produtos/interface-produtos';
+import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-produtos';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: "lista-nomes", component: ListaNomes},
   { path: "tratamento-lista-vazia", component: TratamentoListaVazia},
   { path: "cores-alternadas", component: CoresAlternadas},
-  { path: "interface-produtos", component: InterfaceProdutos}
+  { path: "interface-produtos", component: InterfaceProdutos},
+  { path: "classificacao-produtos", component: ClassificacaoProdutos}
 ];
 
 @NgModule({
