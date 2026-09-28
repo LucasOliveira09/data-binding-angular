@@ -7,6 +7,7 @@ import { SituacaoDoUsuario } from './situacao-do-usuario/situacao-do-usuario';
 import { VerificacaoDeIdade } from './verificacao-de-idade/verificacao-de-idade';
 import { SituacaoDeEstoque } from './situacao-de-estoque/situacao-de-estoque';
 import { TratamentoListaVazia } from './tratamento-lista-vazia/tratamento-lista-vazia';
+import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: "verificacao-de-idade", component: VerificacaoDeIdade},
   { path: "situacao-de-estoque", component: SituacaoDeEstoque},
   { path: "lista-nomes", component: ListaNomes},
-  { path: "tratamento-lista-vazia", component: TratamentoListaVazia}
+  { path: "tratamento-lista-vazia", component: TratamentoListaVazia},
+  { path: "cores-alternadas", component: CoresAlternadas}
 ];
 
 @NgModule({

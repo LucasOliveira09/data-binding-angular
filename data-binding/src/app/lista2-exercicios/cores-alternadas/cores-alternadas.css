@@ -1,0 +1,29 @@
+.item-disciplina {
+        padding: 12px 16px;
+        margin: 6px 0;
+        list-style: none;
+        border-radius: 6px;
+        font-family: sans-serif;
+        border: 1px solid #ddd;
+      }
+      /* 1. Posições pares */
+      .par {
+        background-color: #f0f4f8;
+        color: #333;
+      }
+      /* 2. Posições ímpares */
+      .impar {
+        background-color: #ffffff;
+        color: #333;
+      }
+      /* 3. Destaque na primeira disciplina */
+      .primeiro {
+        font-weight: bold;
+        background-color: #e3f2fd !important; /* Destaque com azul suave */
+        color: #0d47a1;
+      }
+      /* 4. Borda diferente na última disciplina */
+      .ultimo {
+        border: 2px dashed #e65100 !important; /* Borda tracejada chamativa */
+        background-color: #fff3e0;
+      }

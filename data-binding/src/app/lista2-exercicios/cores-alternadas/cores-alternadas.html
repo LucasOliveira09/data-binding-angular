@@ -1,0 +1,25 @@
+<div class="container">
+        <h2>Lista de Disciplinas:</h2>
+        <ul>
+          <li
+            *ngFor="
+              let disciplina of disciplinas;
+              let isPar = even;
+              let isImpar = odd;
+              let isPrimeiro = first;
+              let isUltimo = last
+            "
+            class="item-disciplina"
+            [ngClass]="{
+              'par': isPar,
+              'impar': isImpar,
+              'primeiro': isPrimeiro,
+              'ultimo': isUltimo
+            }"
+          >
+            {{ disciplina }}
+            <span *ngIf="isPrimeiro"> (Primeira!)</span>
+            <span *ngIf="isUltimo"> (Última!)</span>
+          </li>
+        </ul>
+      </div>
