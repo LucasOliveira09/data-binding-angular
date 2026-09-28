@@ -18,6 +18,7 @@ import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis
 import { CadastroSimplificado } from './cadastro-simplificado/cadastro-simplificado';
 import { ListaTarefas } from './lista-tarefas/lista-tarefas';
 import { ConversaoParaASintaxeModerna } from './conversao-para-a-sintaxe-moderna/conversao-para-a-sintaxe-moderna';
+import { DesafioFinal2 } from './desafio-final-2/desafio-final-2';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ConversaoParaASintaxeModerna } from './conversao-para-a-sintaxe-moderna
     CadastroSimplificado,
     ListaTarefas,
     ConversaoParaASintaxeModerna,
+    DesafioFinal2,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })

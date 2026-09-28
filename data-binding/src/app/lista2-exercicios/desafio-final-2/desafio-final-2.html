@@ -1,0 +1,101 @@
+<div class="container">
+        <h2>Acompanhamento de Projetos Integradores</h2>
+        <!-- Painel com total de projetos e concluídos (Itens 11 e 12) -->
+        <div class="metricas-painel">
+          <div class="card-metrica">
+            Total de Projetos: <strong>{{ totalProjetos }}</strong>
+          </div>
+          <div class="card-metrica concluidos">
+            Concluídos: <strong>{{ totalConcluidos }}</strong>
+          </div>
+        </div>
+        <!-- Opção para mostrar/ocultar projetos concluídos (Item 9) -->
+        <div class="filtro-box">
+          <label>
+            <input type="checkbox" [(ngModel)]="ocultarConcluidos" />
+            Ocultar projetos concluídos
+          </label>
+        </div>
+        <!-- Tabela com a lista de projetos -->
+        <table>
+          <thead>
+            <tr>
+              <th>Posição</th>
+              <th>Título do Projeto</th>
+              <th>Equipe</th>
+              <th>Nota</th>
+              <th>Status</th>
+              <th>Situação Entrega</th>
+              <th>Alterar Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Loop com sintaxe moderna @for e track (Itens 14 e 15) -->
+            @for (item of projetos; track item.id; let i = $index) {
+              <!-- Filtro para ocultar se estiver concluído (Item 9) -->
+              @if (!ocultarConcluidos || item.status !== 'concluído') {
+                <tr>
+                  <!-- Posição (Item 2) -->
+                  <td>#{{ i + 1 }}</td>
+                  <!-- Título e Equipe (Item 3) -->
+                  <td class="titulo-col">{{ item.titulo }}</td>
+                  <td>{{ item.equipe }}</td>
+                  <!-- Exibição e estilização condicional da nota (Itens 6, 7 e 8) -->
+                  <td>
+                    @if (item.nota !== null) {
+                      <span
+                        class="tag-nota"
+                        [ngClass]="{
+                          'nota-alta': item.nota >= 7,
+                          'nota-baixa': item.nota < 6
+                        }"
+                      >
+                        {{ item.nota }}
+                      </span>
+                    } @else {
+                      <span class="nota-indefinida">Nota ainda não definida</span>
+                    }
+                  </td>
+                  <!-- Classe CSS dinâmica conforme o status (Item 4) -->
+                  <td>
+                    <span
+                      class="badge-status"
+                      [ngClass]="{
+                        'status-planejamento': item.status === 'planejamento',
+                        'status-desenvolvimento': item.status === 'desenvolvimento',
+                        'status-testes': item.status === 'testes',
+                        'status-concluido': item.status === 'concluído'
+                      }"
+                    >
+                      {{ item.status }}
+                    </span>
+                  </td>
+                  <!-- Mensagem se o projeto foi entregue (Item 5) -->
+                  <td>
+                    @if (item.entregue) {
+                      <span class="badge-entregue">✅ Projeto entregue</span>
+                    } @else {
+                      <span class="badge-pendente">⏳ Em andamento</span>
+                    }
+                  </td>
+                  <!-- Campo para alterar o status do projeto (Item 10) -->
+                  <td>
+                    <select [(ngModel)]="item.status">
+                      @for (opcao of listaStatus; track opcao) {
+                        <option [value]="opcao">{{ opcao }}</option>
+                      }
+                    </select>
+                  </td>
+                </tr>
+              }
+            } @empty {
+              <!-- Tratamento para lista vazia com @empty (Itens 13 e 15) -->
+              <tr>
+                <td colspan="7" class="mensagem-vazia">
+                  Nenhum projeto cadastrado no momento.
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>

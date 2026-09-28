@@ -14,6 +14,7 @@ import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
 import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
 import { CadastroSimplificado } from './cadastro-simplificado/cadastro-simplificado';
 import { ConversaoParaASintaxeModerna } from './conversao-para-a-sintaxe-moderna/conversao-para-a-sintaxe-moderna';
+import { DesafioFinal2 } from './desafio-final-2/desafio-final-2';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: "promocao-produtos", component: PromocaoProdutos },
   { path: "produtos-disponiveis", component: ProdutosDisponiveis},
   { path: "cadastro-simplificado", component:CadastroSimplificado},
-  { path: "conversao-para-a-sintaxe-moderna", component: ConversaoParaASintaxeModerna }
+  { path: "conversao-para-a-sintaxe-moderna", component: ConversaoParaASintaxeModerna },
+  { path: "desafio-final-2", component: DesafioFinal2 }
 ];
 
 @NgModule({
