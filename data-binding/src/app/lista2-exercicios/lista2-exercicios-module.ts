@@ -9,6 +9,7 @@ import { SituacaoDoUsuario } from './situacao-do-usuario/situacao-do-usuario';
 import { VerificacaoDeIdade } from './verificacao-de-idade/verificacao-de-idade';
 import { SituacaoDeEstoque } from './situacao-de-estoque/situacao-de-estoque';
 import { ListaNomes } from './lista-nomes/lista-nomes';
+import { TratamentoListaVazia } from './tratamento-lista-vazia/tratamento-lista-vazia';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ListaNomes } from './lista-nomes/lista-nomes';
     VerificacaoDeIdade,
     SituacaoDeEstoque,
     ListaNomes,
+    TratamentoListaVazia,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })

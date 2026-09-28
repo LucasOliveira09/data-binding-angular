@@ -1,0 +1,16 @@
+<div *ngIf="validarLista(); else retornoListaVazia">
+        <ul>
+          <li *ngFor="let nome of nomes">
+            {{ nome.nome }}
+          </li>
+        </ul>
+      </div>
+      <ng-template #retornoListaVazia>
+        <h1>Lista vazia!</h1>
+      </ng-template>
+      <button (click)="removerUsuario()" [disabled]="!validarLista()">
+        Remover último
+      </button>
+      <button (click)="removerTodos()" [disabled]="!validarLista()">
+        Remover todos
+      </button> 
