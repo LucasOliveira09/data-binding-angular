@@ -12,6 +12,7 @@ import { InterfaceProdutos } from './interface-produtos/interface-produtos';
 import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-produtos';
 import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
 import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
+import { CadastroSimplificado } from './cadastro-simplificado/cadastro-simplificado';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: "interface-produtos", component: InterfaceProdutos },
   { path: "classificacao-produtos", component: ClassificacaoProdutos },
   { path: "promocao-produtos", component: PromocaoProdutos },
-  { path: "produtos-disponiveis", component: ProdutosDisponiveis}
+  { path: "produtos-disponiveis", component: ProdutosDisponiveis},
+  { path: "cadastro-simplificado", component:CadastroSimplificado}
 ];
 
 @NgModule({

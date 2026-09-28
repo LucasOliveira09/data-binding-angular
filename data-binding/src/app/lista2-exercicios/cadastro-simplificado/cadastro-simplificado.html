@@ -1,0 +1,61 @@
+<div class="container">
+        <h2>Cadastro Simplificado de Produtos</h2>
+        <!-- Formulário de Entrada -->
+        <div class="form-cadastro">
+          <div class="form-group">
+            <label>Nome do Produto:</label>
+            <input
+              type="text"
+              [(ngModel)]="novoNome"
+              placeholder="Ex: Teclado Mecânico"
+            />
+          </div>
+          <div class="form-group">
+            <label>Quantidade:</label>
+            <input
+              type="number"
+              [(ngModel)]="novaQuantidade"
+              placeholder="Ex: 5"
+              min="0"
+            />
+          </div>
+          <!-- Botão de Cadastro -->
+          <button (click)="cadastrarProduto()" class="btn-cadastrar">
+            Cadastrar
+          </button>
+        </div>
+        <!-- 6. Mensagem de erro exibida quando o cadastro não puder ser realizado -->
+        <p *ngIf="mensagemErro" class="alerta-erro">
+          ⚠️  {{ mensagemErro }}
+        </p>
+        <hr />
+        <!-- Listagem com *ngFor e botão de Excluir -->
+        <h3>Produtos Cadastrados</h3>
+        <!-- Tratamento se a lista ficar vazia -->
+        <p *ngIf="produtos.length === 0" class="texto-vazio">
+          Nenhum produto cadastrado no momento.
+        </p>
+        <table *ngIf="produtos.length > 0">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Quantidade</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of produtos; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.nome }}</td>
+              <td>{{ item.quantidade }} un</td>
+              <td>
+                <!-- 7. Botão Excluir passando o índice i -->
+                <button (click)="excluirProduto(i)" class="btn-excluir">
+                  Excluir
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
