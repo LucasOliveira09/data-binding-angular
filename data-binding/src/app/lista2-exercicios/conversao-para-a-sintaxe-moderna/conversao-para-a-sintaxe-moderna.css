@@ -1,0 +1,99 @@
+/* Container geral e espaçamento */
+      .container {
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        font-family: Arial, sans-serif;
+      }
+      h2 {
+        color: #263238;
+        border-bottom: 2px solid #eceff1;
+        padding-bottom: 8px;
+        margin-top: 0;
+      }
+      /* Lista de Nomes (Ex 6) */
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+      li {
+        padding: 4px 0;
+        font-size: 15px;
+      }
+      /* Painel de Métricas (Ex 13) */
+      .painel-status {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .painel-status div {
+        background: #f1f5f9;
+        padding: 8px 14px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #334155;
+        border-left: 4px solid #0284c7;
+      }
+      /* Tabelas */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0 25px 0;
+      }
+      th,
+      td {
+        border: 1px solid #e2e8f0;
+        padding: 10px 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #1e293b;
+        color: #ffffff;
+        font-size: 14px;
+      }
+      tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+      /* Estados e Alertas */
+      .tarefa-concluida {
+        background-color: #f1f5f9 !important;
+        opacity: 0.7;
+      }
+      .tarefa-concluida .titulo-tarefa {
+        text-decoration: line-through;
+      }
+      .status-concluida {
+        color: #16a34a;
+        font-weight: bold;
+        color: #16a34a;
+        font-weight: bold;
+      }
+      .status-pendente {
+        color: #ea580c;
+        font-weight: bold;
+      }
+      .alerta-vazio {
+        text-align: center;
+        color: #94a3b8;
+        font-style: italic;
+        padding: 12px;
+      }
+      /* Botões */
+      button {
+        padding: 6px 14px;
+        margin-right: 8px;
+        border: none;
+        border-radius: 4px;
+        background-color: #2563eb;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+        transition: opacity 0.2s;
+      }
+      button:hover {
+        opacity: 0.9;
+      }

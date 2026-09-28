@@ -17,6 +17,7 @@ import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
 import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
 import { CadastroSimplificado } from './cadastro-simplificado/cadastro-simplificado';
 import { ListaTarefas } from './lista-tarefas/lista-tarefas';
+import { ConversaoParaASintaxeModerna } from './conversao-para-a-sintaxe-moderna/conversao-para-a-sintaxe-moderna';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ListaTarefas } from './lista-tarefas/lista-tarefas';
     ProdutosDisponiveis,
     CadastroSimplificado,
     ListaTarefas,
+    ConversaoParaASintaxeModerna,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })

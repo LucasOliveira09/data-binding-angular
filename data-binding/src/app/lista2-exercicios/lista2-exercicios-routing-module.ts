@@ -13,6 +13,7 @@ import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-pr
 import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
 import { ProdutosDisponiveis } from './produtos-disponiveis/produtos-disponiveis';
 import { CadastroSimplificado } from './cadastro-simplificado/cadastro-simplificado';
+import { ConversaoParaASintaxeModerna } from './conversao-para-a-sintaxe-moderna/conversao-para-a-sintaxe-moderna';
 
 const routes: Routes = [
   { path: 'exebicao-de-mensagem', component: ExebicaoDeMensagem },
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: "classificacao-produtos", component: ClassificacaoProdutos },
   { path: "promocao-produtos", component: PromocaoProdutos },
   { path: "produtos-disponiveis", component: ProdutosDisponiveis},
-  { path: "cadastro-simplificado", component:CadastroSimplificado}
+  { path: "cadastro-simplificado", component:CadastroSimplificado},
+  { path: "conversao-para-a-sintaxe-moderna", component: ConversaoParaASintaxeModerna }
 ];
 
 @NgModule({

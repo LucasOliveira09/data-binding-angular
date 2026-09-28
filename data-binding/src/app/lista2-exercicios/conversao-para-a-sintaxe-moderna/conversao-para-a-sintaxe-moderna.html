@@ -1,0 +1,101 @@
+<div class="container">
+        <h2>Lista de Nomes</h2>
+        <ul>
+          @for (item of nomes; track item.id) {
+            <li>
+              {{ item.nome }}
+            </li>
+          } @empty {
+            <!-- Executado automaticamente se o array 'nomes' estiver vazio -->
+            <p class="alerta-vazio">Nenhum nome cadastrado na lista!</p>
+          }
+        </ul>
+        <button (click)="removerUsuario()">Remover último</button>
+        <button (click)="removerTodos()">Remover todos</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Estoque</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of produtos; track item.id) {
+            @if (!somenteDisponiveis || item.quantidade > 0) {
+              <tr>
+                <td>{{ item.nome }}</td>
+                <td>{{ item.quantidade }} un</td>
+                <td>
+                  @if (item.quantidade > 0) {
+                    <span style="color: green;">Disponível</span>
+                  } @else {
+                    <span style="color: red;">Esgotado</span>
+                  }
+                </td>
+              </tr>
+            }
+          } @empty {
+            <tr>
+              <td colspan="3">Nenhum produto cadastrado.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+
+      <div class="container">
+        <h2>Gerenciador de Tarefas</h2>
+        <!-- Métricas no topo -->
+        <div class="painel-status">
+          <div>Total: {{ totalTarefas }}</div>
+          <div>Concluídas: {{ totalConcluidas }}</div>
+          <div>Pendentes: {{ totalPendentes }}</div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Posição</th>
+              <th>Tarefa</th>
+              <th>Responsável</th>
+              <th>Situação</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of tarefas; track item.id; let i = $index) {
+              <tr [ngClass]="{ 'tarefa-concluida': item.concluida }">
+                <td>#{{ i + 1 }}</td>
+                <td>{{ item.titulo }}</td>
+                <td>{{ item.responsavel }}</td>
+                <td>
+                  @if (item.concluida) {
+                    <span class="status-concluida">✅ Concluída</span>
+                  } @else {
+                    <span class="status-pendente">⏳ Pendente</span>
+                  }
+                </td>
+                <td>
+                  <button (click)="alternarSituacao(item)">
+                    @if (item.concluida) {
+                      Reabrir
+                    } @else {
+                      Concluir
+                    }
+                  </button>
+                </td>
+              </tr>
+            } @empty {
+              <!-- Trata o estado vazio sem precisar de ng-template -->
+              <tr>
+                <td colspan="5" class="alerta-vazio">
+                  Nenhuma tarefa cadastrada no momento.
+                <td colspan="5" class="alerta-vazio">
+                  Nenhuma tarefa cadastrada no momento.
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
