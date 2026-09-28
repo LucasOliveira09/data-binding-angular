@@ -1,0 +1,54 @@
+<div class="container">
+        <h2>Catálogo de Produtos & Promoções</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Estoque</th>
+              <th>Status Promoção</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of produtos">
+              <!-- 2 e 5: Nome com negrito dinâmico via ngStyle se estiver em promoção -->
+              <td [ngStyle]="{ 'font-weight': item.promocao ? 'bold' : 'normal' }">
+                {{ item.nome }}
+              </td>
+              <!-- 3 e 5: Preço com cor verde destacada via ngStyle quando em promoção -->
+              <td
+                [ngStyle]="{
+                  'color': item.promocao ? '#2e7d32' : '#333',
+                  'font-weight': item.promocao ? 'bold' : 'normal'
+                }"
+              >
+                {{ item.preco | currency:'BRL':'symbol' }}
+              </td>
+              <td>{{ item.quantidade }} un</td>
+              <!-- 1: Mensagem condicional exibida apenas se promocao for true -->
+              <td>
+                <span *ngIf="item.promocao" class="tag-promocao">
+                  🔥 Produto em promoção!
+                </span>
+                <span *ngIf="!item.promocao" class="tag-normal">
+                  Preço padrão
+                </span>
+              </td>
+              <!-- 4: Botão de alternar promoção recebendo o objeto do loop -->
+              <td>
+                <button
+                  (click)="alternarPromocao(item)"
+                  [ngStyle]="{
+                    'background-color': item.promocao ? '#d32f2f' : '#1976d2',
+                    'color': '#fff'
+                  }"
+                  class="btn-toggle"
+                >
+                  {{ item.promocao ? 'Desativar Promoção' : 'Ativar Promoção' }}
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>

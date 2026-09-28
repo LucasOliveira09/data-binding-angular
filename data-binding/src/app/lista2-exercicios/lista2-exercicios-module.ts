@@ -13,6 +13,7 @@ import { TratamentoListaVazia } from './tratamento-lista-vazia/tratamento-lista-
 import { CoresAlternadas } from './cores-alternadas/cores-alternadas';
 import { InterfaceProdutos } from './interface-produtos/interface-produtos';
 import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-produtos';
+import { PromocaoProdutos } from './promocao-produtos/promocao-produtos';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ClassificacaoProdutos } from './classificacao-produtos/classificacao-pr
     CoresAlternadas,
     InterfaceProdutos,
     ClassificacaoProdutos,
+    PromocaoProdutos,
   ],
   imports: [CommonModule, Lista2ExerciciosRoutingModule, FormsModule],
 })
